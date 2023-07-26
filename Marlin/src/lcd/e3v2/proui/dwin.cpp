@@ -746,14 +746,14 @@ void _drawZOffsetIcon() {
 void _drawFeedrate() {
   #if ENABLED(SHOW_SPEED_IND)
     int16_t _value;
-    if (blink) {
+    /*if (blink) {
       _value = feedrate_percentage;
       DWINUI::drawString(DWIN_FONT_STAT, hmiData.colorIndicator, hmiData.colorBackground, 116 + 4 * STAT_CHR_W + 2, 384, F(" %"));
     }
-    else {
+    else {*/
       _value = CEIL(feedrate_mm_s * feedrate_percentage / 100);
       dwinDrawBox(1, hmiData.colorBackground, 116 + 5 * STAT_CHR_W + 2, 384, 20, 20);
-    }
+    //}
     DWINUI::drawInt(DWIN_FONT_STAT, hmiData.colorIndicator, hmiData.colorBackground, 3, 116 + 2 * STAT_CHR_W, 384, _value);
   #else
     static int16_t _feedrate = 100;
