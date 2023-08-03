@@ -1222,7 +1222,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 424.9 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 416.7 }
 #define LIMITED_MAX_STEPS_EDITING
 #if ENABLED(LIMITED_MAX_STEPS_EDITING)
   #define MAX_STEPS_EDIT_VALUES       { 200, 200, 2000, 2000 }
