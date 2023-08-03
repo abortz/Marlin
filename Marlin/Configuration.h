@@ -3397,7 +3397,7 @@
 //#define SHOW_REAL_POS
 //#define ACTIVATE_MESH_ITEM  // Allows temporary enabling of mesh leveling
 #define RUNOUT_TUNE_ITEM
-//#define PLR_TUNE_ITEM  //   // Enable only if Power loss recovery is enabled
+#define PLR_TUNE_ITEM  //   // Enable only if Power loss recovery is enabled
 #define JD_TUNE_ITEM  // Enable only if Juntion Deviation is enabled
 #define ADVK_TUNE_ITEM  // Enable only if Linear Advance is enabled
 //#define MEDIASORT_MENU_ITEM  // Allows enable/disable file list sorting
