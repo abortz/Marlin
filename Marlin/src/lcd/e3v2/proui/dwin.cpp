@@ -1701,7 +1701,7 @@ void dwinPrintFinished() {
   hmiFlag.abort_flag = false;
   hmiFlag.pause_flag = false;
   wait_for_heatup = false;
-  planner.finish_and_disable();
+  //planner.finish_and_disable();
   thermalManager.cooldown();
   gotoPrintDone();
 }
