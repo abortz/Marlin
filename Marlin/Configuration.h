@@ -710,11 +710,11 @@
   #define MPC_INCLUDE_FAN                             // Model the fan speed?
 
   // Measured physical constants from M306
-  #define MPC_BLOCK_HEAT_CAPACITY { 9.58f }           // (J/K) Heat block heat capacities.
-  #define MPC_SENSOR_RESPONSIVENESS { 0.2593f }         // (K/s per ∆K) Rate of change of sensor temperature from heat block.
-  #define MPC_AMBIENT_XFER_COEFF { 0.0478f }           // (W/K) Heat transfer coefficients from heat block to room air with fan off.
+  #define MPC_BLOCK_HEAT_CAPACITY { 9.35f }           // (J/K) Heat block heat capacities.
+  #define MPC_SENSOR_RESPONSIVENESS { 0.2224f }         // (K/s per ∆K) Rate of change of sensor temperature from heat block.
+  #define MPC_AMBIENT_XFER_COEFF { 0.0460f }           // (W/K) Heat transfer coefficients from heat block to room air with fan off.
   #if ENABLED(MPC_INCLUDE_FAN)
-    #define MPC_AMBIENT_XFER_COEFF_FAN255 { 0.0630f }  // (W/K) Heat transfer coefficients from heat block to room air with fan on full.
+    #define MPC_AMBIENT_XFER_COEFF_FAN255 { 0.0891f }  // (W/K) Heat transfer coefficients from heat block to room air with fan on full.
   #endif
 
   // For one fan and multiple hotends MPC needs to know how to apply the fan cooling effect.
@@ -2408,16 +2408,16 @@
 //
 
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 195
+#define PREHEAT_1_TEMP_HOTEND 0
 #define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_TEMP_CHAMBER 35
-#define PREHEAT_1_FAN_SPEED     128 // Value from 0 to 255
+#define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "ABS"
-#define PREHEAT_2_TEMP_HOTEND 240
-#define PREHEAT_2_TEMP_BED     90
+#define PREHEAT_2_TEMP_HOTEND 0
+#define PREHEAT_2_TEMP_BED     95
 #define PREHEAT_2_TEMP_CHAMBER 35
-#define PREHEAT_2_FAN_SPEED     128 // Value from 0 to 255
+#define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_3_LABEL       "PETG"
 #define PREHEAT_3_TEMP_HOTEND 230
@@ -2425,9 +2425,9 @@
 #define PREHEAT_3_FAN_SPEED   128
 
 #define PREHEAT_4_LABEL       "CUSTOM"
-#define PREHEAT_4_TEMP_HOTEND 190
-#define PREHEAT_4_TEMP_BED     50
-#define PREHEAT_4_FAN_SPEED   128
+#define PREHEAT_4_TEMP_HOTEND 155
+#define PREHEAT_4_TEMP_BED     60
+#define PREHEAT_4_FAN_SPEED   0
 
 // @section motion
 
@@ -3437,25 +3437,7 @@
 //#define DWIN_MARLINUI_PORTRAIT      // MarlinUI (portrait orientation)
 //#define DWIN_MARLINUI_LANDSCAPE     // MarlinUI (landscape orientation)
 
-#define USE_STOCK_DWIN_SET
-
-#define HAS_GCODE_PREVIEW 1
-//#define HAS_CUSTOM_COLORS 1
-//#define HAS_PLOT 1
-//#define HAS_ESDIAG 1
-//#define HAS_CGCODE 1
-//#define HAS_LOCKSCREEN 1
-//#define HAS_SD_EXTENDER 1  // Enable to support SD card extender cables
-#define MESH_EDIT_MENU
 //#define SHOW_REAL_POS
-//#define ACTIVATE_MESH_ITEM  // Allows temporary enabling of mesh leveling
-#define RUNOUT_TUNE_ITEM
-#define PLR_TUNE_ITEM  //   // Enable only if Power loss recovery is enabled
-#define JD_TUNE_ITEM  // Enable only if Juntion Deviation is enabled
-#define ADVK_TUNE_ITEM  // Enable only if Linear Advance is enabled
-//#define MEDIASORT_MENU_ITEM  // Allows enable/disable file list sorting
-//#define CCLOUD_PRINT_SUPPORT  // Allows enable/disable Creality Cloud Print Support
-//#define ZHOME_BEFORE_LEVELING
 //#define SMOOTH_ENCODER_MENUITEMS  // Menu items value faster/smooth change rate
 #define SHOW_SPEED_IND // Show the axes speed in mm/s
 //#define NO_BLINK_IND  // Disables dashboard icon background blink indicator
